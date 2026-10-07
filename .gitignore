@@ -1,0 +1,16 @@
+# Build output (never commit: this repo syncs between machines)
+build/
+cmake-build-*/
+compile_commands.json
+.cache/
+
+# macOS
+.DS_Store
+
+# Editors / IDEs
+.vscode/
+.idea/
+*.xcodeproj/
+xcuserdata/
+*.swp
+*~
