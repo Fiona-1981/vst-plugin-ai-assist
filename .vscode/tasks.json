@@ -1,0 +1,26 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build & install plugin",
+            "detail": "Builds FionaGain and copies VST3/AU to ~/Library/Audio/Plug-Ins",
+            "type": "shell",
+            "command": "cmake --build build",
+            "group": { "kind": "build", "isDefault": true },
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "Configure (Debug)",
+            "type": "shell",
+            "command": "cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Debug",
+            "problemMatcher": []
+        },
+        {
+            "label": "Validate AU (auval)",
+            "type": "shell",
+            "command": "auval -v aufx FGan Fiwi",
+            "dependsOn": "Build & install plugin",
+            "problemMatcher": []
+        }
+    ]
+}

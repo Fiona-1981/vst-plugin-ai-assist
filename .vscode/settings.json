@@ -1,0 +1,19 @@
+{
+    // Match the command-line build in CLAUDE.md so VS Code and the terminal share build/.
+    "cmake.generator": "Ninja",
+    "cmake.buildDirectory": "${workspaceFolder}/build",
+    "cmake.configureOnOpen": true,
+
+    // Let CMake Tools tell IntelliSense how each file is compiled (JUCE include paths, defines).
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+    "C_Cpp.default.compileCommands": "${workspaceFolder}/build/compile_commands.json",
+    "C_Cpp.default.cppStandard": "c++17",
+
+    // Keep the fetched JUCE sources out of search results and the file watcher.
+    "search.exclude": {
+        "build/**": true
+    },
+    "files.watcherExclude": {
+        "**/build/**": true
+    }
+}

@@ -8,7 +8,11 @@ compile_commands.json
 .DS_Store
 
 # Editors / IDEs
-.vscode/
+# Share project-level VS Code config between machines; ignore everything else in .vscode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/extensions.json
 .idea/
 *.xcodeproj/
 xcuserdata/
